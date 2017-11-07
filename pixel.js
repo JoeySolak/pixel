@@ -8,46 +8,67 @@ this.blue=b;
 
 
     this.addRed = function(n){
-      this.red=this.red + n
+      this.red=this.red + n;
       if(this.red>255){
-        console.log(255);{
-
-
-      if(this.red<0)
-
-        console.log(0);
-
-        }
+          this.red=255;
       }
-        //code in here
+      if(this.red<0){
+        this.red=0;
+    }
     };
 
     this.addGreen = function(n){
+        this.green=this.green + n;
       if(this.green>255){
-        console.log(255);
+        this.green=255;
       }
       if(this.green<0){
-        console.log(0);
+        this.green=0;
       }
         //code in here
     };
 
     this.addBlue = function(n){
+        this.blue=this.blue + n;
       if(this.blue>255){
-        console.log(255);
+        this.blue=255;
       }
       if(this.blue<0){
-        console.log(0);
+        this.blue=0;
       }
         //code in here
     };
 
     this.brighten = function(n){
-      
-        //code in here
-    };
+      this.red=this.red + this.red*n;
+      this.green=this.green + this.green*n;
+      this.blue=this.blue + this.blue *n;
 
+      if(this.red>255){
+          this.red=255;
+      }
+      if(this.red<0){
+          this.red=0;
+      }
+      if(this.green>255){
+          this.green=255;
+      }
+      if(this.green<0){
+          this.green=0;
+      }
+      if(this.blue>255){
+          this.blue=255;
+      }
+      if(this.blue<0){
+          this.blue=0;
+      }
+        //code in here
+};
     this.complement = function(n){
+        let r=255-this.red;
+        let g=255-this.green;
+        let b=255-this.blue;
+        return new Pixel(r,g,b);
         //code in here
     };
 
