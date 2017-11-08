@@ -73,6 +73,8 @@ this.blue=b;
     };
 
     this.grayScale = function(n){
+      let gray= this.red + this.green + this.blue
+      return gray/3;
         //code in here
     };
 
